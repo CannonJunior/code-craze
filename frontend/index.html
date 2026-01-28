@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Craze Academy - Science Olympiad Study Guide</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">🎯 Code Craze Academy</h1>
+                <nav class="nav">
+                    <button id="nav-dashboard" class="nav-button active">Dashboard</button>
+                    <button id="nav-practice" class="nav-button">Practice</button>
+                    <button id="nav-progress" class="nav-button">Progress</button>
+                    <button id="nav-badges" class="nav-button">Badges</button>
+                </nav>
+                <div class="user-info">
+                    <span class="user-name">Guest</span>
+                    <button id="btn-login" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard View -->
+            <div id="view-dashboard" class="view active">
+                <div class="welcome-section">
+                    <h2>Welcome to Code Craze Academy! 🎯</h2>
+                    <p>Master coding, AI, cryptography, and Python for Science Olympiad!</p>
+                </div>
+
+                <!-- Competency Dashboard -->
+                <div class="competency-dashboard">
+                    <div class="dashboard-header">
+                        <h3>Your Competency Dashboard</h3>
+                        <div class="readiness-score">
+                            <div class="readiness-label">Competition Readiness</div>
+                            <div class="readiness-value">0%</div>
+                        </div>
+                    </div>
+
+                    <div class="competency-grid">
+                        <div class="competency-card">
+                            <h4>1. Principles of Coding</h4>
+                            <div class="mastery-bar">
+                                <div class="mastery-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="competency-stats">
+                                <span>Accuracy: --%</span>
+                                <span class="trend">--</span>
+                            </div>
+                        </div>
+                        <!-- More competency cards will be dynamically generated -->
+                    </div>
+
+                    <div class="recommendations">
+                        <h4>Recommended Focus</h4>
+                        <ul id="recommendations-list">
+                            <li>Start learning to unlock recommendations!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="action-card" id="start-balanced">
+                        <span class="action-icon">🎯</span>
+                        <h3>Balanced Practice</h3>
+                        <p>Mix of new content + review + weak areas</p>
+                    </button>
+                    <button class="action-card" id="start-weak-focus">
+                        <span class="action-icon">⚠️</span>
+                        <h3>Weak Area Focus</h3>
+                        <p>Practice your struggling topics</p>
+                    </button>
+                    <button class="action-card" id="start-review">
+                        <span class="action-icon">🔄</span>
+                        <h3>Review Mode</h3>
+                        <p>Reinforce previously learned topics</p>
+                    </button>
+                    <button class="action-card" id="start-competition">
+                        <span class="action-icon">🏆</span>
+                        <h3>Competition Sim</h3>
+                        <p>Realistic test conditions</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Practice View -->
+            <div id="view-practice" class="view">
+                <div class="practice-container">
+                    <div class="practice-header">
+                        <div class="practice-mode">
+                            <span id="practice-mode-label">Practice Mode</span>
+                        </div>
+                        <div class="practice-stats">
+                            <span id="practice-points">0 VP</span>
+                            <span id="practice-streak">Streak: 0</span>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+                        <div id="practice-context" class="practice-context"></div>
+                        <div id="question-content" class="question-content">
+                            <p>Select a practice mode to begin!</p>
+                        </div>
+                        <div id="code-snippet" class="code-snippet hidden"></div>
+                        <div id="answers-container" class="answers-container"></div>
+                        <div id="explanation-container" class="explanation-container hidden"></div>
+                        <div class="question-actions">
+                            <button id="btn-hint" class="btn btn-secondary">Hint (-5 VP)</button>
+                            <button id="btn-submit" class="btn btn-primary">Submit Answer</button>
+                            <button id="btn-next" class="btn btn-primary hidden">Next Question</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress View -->
+            <div id="view-progress" class="view">
+                <h2>Learning Progress</h2>
+                <div class="progress-overview">
+                    <div class="stat-card">
+                        <h3>Total Points</h3>
+                        <div class="stat-value">0 VP</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Badges Earned</h3>
+                        <div class="stat-value">0 / 30</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Current Level</h3>
+                        <div class="stat-value">Level 0</div>
+                    </div>
+                </div>
+
+                <div class="levels-container">
+                    <!-- Levels will be dynamically generated -->
+                </div>
+            </div>
+
+            <!-- Badges View -->
+            <div id="view-badges" class="view">
+                <h2>Achievement Badges</h2>
+                <div class="badges-grid">
+                    <!-- Badges will be dynamically generated -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Code Craze Academy v0.1.0 | Science Olympiad Code Craze Study Guide</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/utils/api.js"></script>
+    <script src="/components/dashboard.js"></script>
+    <script src="/components/practice.js"></script>
+    <script src="/components/progress.js"></script>
+    <script>
+        // Simple navigation
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                // Remove active class from all buttons and views
+                document.querySelectorAll('.nav-button').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+
+                // Add active class to clicked button
+                e.target.classList.add('active');
+
+                // Show corresponding view
+                const viewId = 'view-' + e.target.id.replace('nav-', '');
+                document.getElementById(viewId).classList.add('active');
+            });
+        });
+
+        // Initialize app
+        console.log('Code Craze Academy initialized');
+        console.log('API endpoint:', window.location.origin + '/api');
+    </script>
+</body>
+</html>

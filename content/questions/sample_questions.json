@@ -1,0 +1,820 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question_text": "What does the Karel command 'move()' do?",
+      "question_type": "multiple_choice",
+      "topic_id": "1.1",
+      "difficulty": 1,
+      "answers": [
+        {
+          "text": "Moves Karel forward one space in the direction it's facing",
+          "correct": true,
+          "explanation": "Correct! The move() command makes Karel move exactly one space forward in whatever direction it is currently facing.",
+          "teaching_point": "move() always moves exactly one step forward, never backward or sideways"
+        },
+        {
+          "text": "Turns Karel to the left",
+          "correct": false,
+          "explanation": "That's what turnLeft() does. move() makes Karel go forward one space.",
+          "common_mistake": "Confusing move() with turnLeft()"
+        },
+        {
+          "text": "Places a tennis ball at Karel's current position",
+          "correct": false,
+          "explanation": "That's what putBall() does. move() makes Karel go forward one space.",
+          "common_mistake": "Confusing move() with putBall()"
+        },
+        {
+          "text": "Picks up a tennis ball from Karel's current position",
+          "correct": false,
+          "explanation": "That's what takeBall() does. move() makes Karel go forward one space.",
+          "common_mistake": "Confusing move() with takeBall()"
+        }
+      ],
+      "solution_steps": [
+        "1. Karel has four basic commands: move(), turnLeft(), putBall(), takeBall()",
+        "2. move() is the command for movement",
+        "3. Karel moves one space in the direction it faces",
+        "4. Remember: Karel can only move forward, never backward!"
+      ],
+      "lesson_reference": "level_1_karel_basics"
+    },
+    {
+      "id": 2,
+      "question_text": "What is the output of this Python code?\n\nx = 5\ny = 3\nprint(x + y)",
+      "question_type": "code_trace",
+      "topic_id": "4.1",
+      "difficulty": 1,
+      "code_snippet": "x = 5\ny = 3\nprint(x + y)",
+      "answers": [
+        {
+          "text": "8",
+          "correct": true,
+          "explanation": "Correct! x=5 and y=3, so x+y = 5+3 = 8",
+          "teaching_point": "The + operator adds numbers together in Python"
+        },
+        {
+          "text": "53",
+          "correct": false,
+          "explanation": "This would happen if x and y were strings ('5' + '3' = '53'). But they're integers, so Python adds them: 5 + 3 = 8",
+          "common_mistake": "Confusing string concatenation with numeric addition"
+        },
+        {
+          "text": "x + y",
+          "correct": false,
+          "explanation": "Python evaluates the expression x + y before printing. It prints the result (8), not the literal text 'x + y'",
+          "common_mistake": "Not understanding that variables are evaluated"
+        },
+        {
+          "text": "Error",
+          "correct": false,
+          "explanation": "This code is valid Python. Both x and y are integers, and adding them works fine.",
+          "common_mistake": "Expecting an error when code is correct"
+        }
+      ],
+      "solution_steps": [
+        "1. x is assigned the value 5",
+        "2. y is assigned the value 3",
+        "3. x + y is evaluated: 5 + 3 = 8",
+        "4. print() outputs the result: 8"
+      ],
+      "lesson_reference": "level_7_python_basics"
+    },
+    {
+      "id": 3,
+      "question_text": "What type of machine learning is used when you have labeled training data with known correct answers?",
+      "question_type": "multiple_choice",
+      "topic_id": "2.3",
+      "difficulty": 2,
+      "answers": [
+        {
+          "text": "Supervised Learning",
+          "correct": true,
+          "explanation": "Correct! Supervised learning uses labeled data where the correct answers are known. The model learns to predict outputs from inputs.",
+          "teaching_point": "Think 'supervised' like a teacher supervising with an answer key"
+        },
+        {
+          "text": "Unsupervised Learning",
+          "correct": false,
+          "explanation": "Unsupervised learning works with unlabeled data - it finds patterns without knowing the 'correct' answers. Supervised learning uses labeled data.",
+          "common_mistake": "Confusing supervised and unsupervised learning"
+        },
+        {
+          "text": "Reinforcement Learning",
+          "correct": false,
+          "explanation": "Reinforcement learning learns through trial and error with rewards/penalties. Supervised learning uses labeled training data.",
+          "common_mistake": "Confusing reinforcement learning with supervised learning"
+        },
+        {
+          "text": "Deep Learning",
+          "correct": false,
+          "explanation": "Deep learning is a type of neural network architecture, not a learning paradigm. It can be used with supervised, unsupervised, or reinforcement learning.",
+          "common_mistake": "Confusing architecture types with learning paradigms"
+        }
+      ],
+      "solution_steps": [
+        "1. Three main types: Supervised, Unsupervised, Reinforcement",
+        "2. Supervised = labeled data with correct answers",
+        "3. Unsupervised = no labels, finds patterns",
+        "4. Reinforcement = learns from rewards/penalties"
+      ],
+      "lesson_reference": "level_4_machine_learning"
+    },
+    {
+      "id": 4,
+      "question_text": "Using a Caesar cipher with a shift of 3, what is the encryption of 'CAT'?",
+      "question_type": "multiple_choice",
+      "topic_id": "3.1",
+      "difficulty": 2,
+      "answers": [
+        {
+          "text": "FDW",
+          "correct": true,
+          "explanation": "Correct! With shift 3: C→F, A→D, T→W. So CAT becomes FDW.",
+          "teaching_point": "Caesar cipher shifts each letter by the same amount in the alphabet"
+        },
+        {
+          "text": "DBU",
+          "correct": false,
+          "explanation": "This would be a shift of 1, not 3. With shift 3: C+3=F, A+3=D, T+3=W = FDW",
+          "common_mistake": "Using wrong shift value"
+        },
+        {
+          "text": "ZXQ",
+          "correct": false,
+          "explanation": "This is shifting backward, not forward. Caesar cipher shifts forward: C+3=F, A+3=D, T+3=W = FDW",
+          "common_mistake": "Shifting in the wrong direction"
+        },
+        {
+          "text": "GEX",
+          "correct": false,
+          "explanation": "Check your shifts: C+3=F (not G), A+3=D (not E), T+3=W (not X). Answer is FDW.",
+          "common_mistake": "Counting errors in shift"
+        }
+      ],
+      "solution_steps": [
+        "1. Caesar cipher shifts each letter by the key value",
+        "2. C + 3 = F (C is the 3rd letter, F is the 6th)",
+        "3. A + 3 = D (A is the 1st letter, D is the 4th)",
+        "4. T + 3 = W (T is the 20th letter, W is the 23rd)",
+        "5. Result: CAT → FDW"
+      ],
+      "lesson_reference": "level_5_cryptography_basics"
+    },
+    {
+      "id": 5,
+      "question_text": "In Python, what is the output of: print(len('Hello'))",
+      "question_type": "code_trace",
+      "topic_id": "4.6",
+      "difficulty": 1,
+      "code_snippet": "print(len('Hello'))",
+      "answers": [
+        {
+          "text": "5",
+          "correct": true,
+          "explanation": "Correct! len() returns the number of characters in a string. 'Hello' has 5 characters: H-e-l-l-o",
+          "teaching_point": "len() counts all characters including spaces and punctuation"
+        },
+        {
+          "text": "Hello",
+          "correct": false,
+          "explanation": "len() returns the LENGTH (number of characters), not the string itself. 'Hello' has 5 characters.",
+          "common_mistake": "Thinking len() returns the string"
+        },
+        {
+          "text": "4",
+          "correct": false,
+          "explanation": "Count again: H(1), e(2), l(3), l(4), o(5). There are 5 characters, not 4.",
+          "common_mistake": "Miscounting or using zero-based counting"
+        },
+        {
+          "text": "Error",
+          "correct": false,
+          "explanation": "This is valid Python. len() works on strings and returns the character count.",
+          "common_mistake": "Not knowing len() works on strings"
+        }
+      ],
+      "solution_steps": [
+        "1. len() is a built-in function that returns length",
+        "2. For strings, it returns the number of characters",
+        "3. Count: H-e-l-l-o = 5 characters",
+        "4. print() outputs: 5"
+      ],
+      "lesson_reference": "level_7_python_basics"
+    },
+    {
+      "id": 6,
+      "question_text": "What is the key difference between symmetric and asymmetric encryption?",
+      "question_type": "multiple_choice",
+      "topic_id": "3.2",
+      "difficulty": 3,
+      "answers": [
+        {
+          "text": "Symmetric uses one key for both encryption/decryption; asymmetric uses two different keys",
+          "correct": true,
+          "explanation": "Correct! Symmetric = same key for encrypt & decrypt. Asymmetric = public key to encrypt, private key to decrypt.",
+          "teaching_point": "Symmetric = 'same' key, Asymmetric = 'different' keys"
+        },
+        {
+          "text": "Symmetric is faster but asymmetric is more secure",
+          "correct": false,
+          "explanation": "While this may be true in practice, the KEY difference is the number of keys used, not speed or security.",
+          "common_mistake": "Focusing on performance rather than the fundamental difference"
+        },
+        {
+          "text": "Symmetric encryption can't be broken, but asymmetric can",
+          "correct": false,
+          "explanation": "Both can theoretically be broken. The main difference is symmetric uses one key, asymmetric uses a key pair.",
+          "common_mistake": "Misunderstanding encryption security"
+        },
+        {
+          "text": "Asymmetric is older than symmetric encryption",
+          "correct": false,
+          "explanation": "Actually, symmetric encryption is older (e.g., Caesar cipher). Asymmetric was invented in the 1970s. But the key difference is the number of keys.",
+          "common_mistake": "Confusing history with fundamental properties"
+        }
+      ],
+      "solution_steps": [
+        "1. Symmetric encryption: ONE key used for both operations",
+        "2. Asymmetric encryption: TWO keys (public and private)",
+        "3. Public key encrypts, private key decrypts",
+        "4. Examples: Symmetric=AES, Asymmetric=RSA"
+      ],
+      "lesson_reference": "level_6_encryption_methods"
+    },
+    {
+      "id": 7,
+      "question_text": "What is 'superposition' in quantum computing?",
+      "question_type": "multiple_choice",
+      "topic_id": "5.1",
+      "difficulty": 3,
+      "answers": [
+        {
+          "text": "A qubit can be in multiple states (0 and 1) simultaneously until measured",
+          "correct": true,
+          "explanation": "Correct! Unlike classical bits, qubits can exist in a superposition of both 0 and 1 at the same time.",
+          "teaching_point": "Superposition enables quantum computers to process many possibilities at once"
+        },
+        {
+          "text": "Two qubits that are connected and affect each other",
+          "correct": false,
+          "explanation": "That's entanglement, not superposition. Superposition is about a single qubit being in multiple states.",
+          "common_mistake": "Confusing superposition with entanglement"
+        },
+        {
+          "text": "Placing one quantum computer on top of another",
+          "correct": false,
+          "explanation": "Superposition in quantum computing refers to quantum states, not physical placement of hardware.",
+          "common_mistake": "Taking the word too literally"
+        },
+        {
+          "text": "A qubit that is always in state 1",
+          "correct": false,
+          "explanation": "Superposition means the qubit is in BOTH 0 AND 1 simultaneously, not just one state.",
+          "common_mistake": "Misunderstanding what 'super' means here"
+        }
+      ],
+      "solution_steps": [
+        "1. Classical bit: either 0 OR 1",
+        "2. Qubit in superposition: 0 AND 1 simultaneously",
+        "3. When measured, superposition collapses to 0 or 1",
+        "4. This enables quantum parallelism"
+      ],
+      "lesson_reference": "level_9_quantum_computing"
+    },
+    {
+      "id": 8,
+      "question_text": "What is the output of this Python code?\n\nfor i in range(3):\n    print(i)",
+      "question_type": "code_trace",
+      "topic_id": "4.3",
+      "difficulty": 2,
+      "code_snippet": "for i in range(3):\n    print(i)",
+      "answers": [
+        {
+          "text": "0\\n1\\n2",
+          "correct": true,
+          "explanation": "Correct! range(3) generates 0, 1, 2. The loop prints each value on a new line.",
+          "teaching_point": "range(n) generates numbers from 0 to n-1, not 1 to n"
+        },
+        {
+          "text": "1\\n2\\n3",
+          "correct": false,
+          "explanation": "range(3) starts at 0, not 1. It generates 0, 1, 2 (three numbers total).",
+          "common_mistake": "Thinking range starts at 1"
+        },
+        {
+          "text": "0 1 2",
+          "correct": false,
+          "explanation": "Close! But print() adds a newline after each output, so each number appears on its own line: 0, then 1, then 2.",
+          "common_mistake": "Forgetting print() adds newlines"
+        },
+        {
+          "text": "3",
+          "correct": false,
+          "explanation": "The loop runs 3 times, printing i each time. It prints 0, then 1, then 2.",
+          "common_mistake": "Thinking range(3) prints just 3"
+        }
+      ],
+      "solution_steps": [
+        "1. range(3) creates sequence: 0, 1, 2",
+        "2. Loop iteration 1: i=0, prints 0",
+        "3. Loop iteration 2: i=1, prints 1",
+        "4. Loop iteration 3: i=2, prints 2",
+        "5. Output: 0, 1, 2 (each on new line)"
+      ],
+      "lesson_reference": "level_7_python_basics"
+    },
+    {
+      "id": 9,
+      "question_text": "Which of the following best describes a Large Language Model (LLM)?",
+      "question_type": "multiple_choice",
+      "topic_id": "2.2",
+      "difficulty": 2,
+      "answers": [
+        {
+          "text": "An AI trained on massive text data to generate human-like text",
+          "correct": true,
+          "explanation": "Correct! LLMs are trained on billions of words to predict and generate text that sounds natural and human-like.",
+          "teaching_point": "Examples include GPT, Claude, and Gemini"
+        },
+        {
+          "text": "A very large computer monitor",
+          "correct": false,
+          "explanation": "LLM stands for Large Language Model, not Large Monitor. It's an AI system for processing and generating text.",
+          "common_mistake": "Taking the acronym too literally"
+        },
+        {
+          "text": "A programming language for robots",
+          "correct": false,
+          "explanation": "LLMs are AI models, not programming languages. They process and generate natural language (like English).",
+          "common_mistake": "Confusing AI models with programming languages"
+        },
+        {
+          "text": "A database that stores all known words",
+          "correct": false,
+          "explanation": "LLMs are neural networks that learned patterns from text, not just word databases. They can generate new text.",
+          "common_mistake": "Thinking LLMs are just word lookups"
+        }
+      ],
+      "solution_steps": [
+        "1. LLM = Large Language Model",
+        "2. 'Large' = trained on massive amounts of text",
+        "3. 'Language' = processes human language",
+        "4. 'Model' = AI/neural network model",
+        "5. Key capability: generates human-like text"
+      ],
+      "lesson_reference": "level_3_ai_fundamentals"
+    },
+    {
+      "id": 10,
+      "question_text": "What will this code print?\n\ndef greet(name):\n    return 'Hello, ' + name\n\nprint(greet('Alice'))",
+      "question_type": "code_trace",
+      "topic_id": "4.4",
+      "difficulty": 2,
+      "code_snippet": "def greet(name):\n    return 'Hello, ' + name\n\nprint(greet('Alice'))",
+      "answers": [
+        {
+          "text": "Hello, Alice",
+          "correct": true,
+          "explanation": "Correct! The function greet takes 'Alice' as name, returns 'Hello, ' + 'Alice' = 'Hello, Alice'",
+          "teaching_point": "Functions can take parameters and return values"
+        },
+        {
+          "text": "Hello, name",
+          "correct": false,
+          "explanation": "The parameter 'name' is replaced by the argument 'Alice'. It doesn't print the literal word 'name'.",
+          "common_mistake": "Not understanding parameter substitution"
+        },
+        {
+          "text": "greet('Alice')",
+          "correct": false,
+          "explanation": "Python evaluates the function call and prints the RETURN value ('Hello, Alice'), not the call itself.",
+          "common_mistake": "Not understanding function evaluation"
+        },
+        {
+          "text": "Nothing (no output)",
+          "correct": false,
+          "explanation": "The function returns a value, and print() outputs it. The code will print 'Hello, Alice'.",
+          "common_mistake": "Confusing return with no output"
+        }
+      ],
+      "solution_steps": [
+        "1. def greet(name) defines a function with parameter 'name'",
+        "2. greet('Alice') calls the function with 'Alice'",
+        "3. Inside function: 'Hello, ' + 'Alice' = 'Hello, Alice'",
+        "4. return sends this value back",
+        "5. print() outputs: Hello, Alice"
+      ],
+      "lesson_reference": "level_7_python_basics"
+    },
+    {
+      "id": 11,
+      "question_text": "In Karel, what does a while loop do?",
+      "question_type": "multiple_choice",
+      "topic_id": "1.3",
+      "difficulty": 2,
+      "answers": [
+        {
+          "text": "Repeats a set of commands as long as a condition is true",
+          "correct": true,
+          "explanation": "Correct! A while loop keeps executing its commands until the condition becomes false.",
+          "teaching_point": "while(frontIsClear()) { move(); } - Karel keeps moving while the front is clear"
+        },
+        {
+          "text": "Executes commands exactly once",
+          "correct": false,
+          "explanation": "That's just a regular command or function call. A while loop repeats as long as the condition is true.",
+          "common_mistake": "Confusing while with single execution"
+        },
+        {
+          "text": "Waits for a specific amount of time",
+          "correct": false,
+          "explanation": "The 'while' in programming means 'as long as', not 'wait'. It repeats commands while a condition is true.",
+          "common_mistake": "Misunderstanding the word 'while'"
+        },
+        {
+          "text": "Runs forever without stopping",
+          "correct": false,
+          "explanation": "A while loop stops when its condition becomes false. Only an infinite loop (while(true)) runs forever.",
+          "common_mistake": "Thinking all while loops are infinite"
+        }
+      ],
+      "solution_steps": [
+        "1. while loop syntax: while(condition) { commands }",
+        "2. Check condition - if true, run commands",
+        "3. Repeat step 2 until condition is false",
+        "4. Example: while(ballsPresent()) { takeBall(); }"
+      ],
+      "lesson_reference": "level_2_functions_control"
+    },
+    {
+      "id": 12,
+      "question_text": "What is 'AI hallucination'?",
+      "question_type": "multiple_choice",
+      "topic_id": "2.4",
+      "difficulty": 2,
+      "answers": [
+        {
+          "text": "When an AI generates false or made-up information that sounds convincing",
+          "correct": true,
+          "explanation": "Correct! AI hallucinations are confident-sounding outputs that are factually incorrect or completely fabricated.",
+          "teaching_point": "Always verify AI-generated information from reliable sources"
+        },
+        {
+          "text": "When an AI creates visual images",
+          "correct": false,
+          "explanation": "Image generation is a feature, not a hallucination. Hallucination refers to generating false information.",
+          "common_mistake": "Confusing image generation with hallucination"
+        },
+        {
+          "text": "When the AI system crashes",
+          "correct": false,
+          "explanation": "A crash is a technical failure. Hallucination is when the AI works but produces false information.",
+          "common_mistake": "Confusing errors with hallucinations"
+        },
+        {
+          "text": "When humans imagine AI is thinking",
+          "correct": false,
+          "explanation": "AI hallucination is about the AI's output being false, not about human perception of AI.",
+          "common_mistake": "Misunderstanding whose 'hallucination' it is"
+        }
+      ],
+      "solution_steps": [
+        "1. AI hallucination = AI generates false information",
+        "2. The AI sounds confident even when wrong",
+        "3. Can include made-up facts, fake citations, etc.",
+        "4. Important: always fact-check AI outputs!"
+      ],
+      "lesson_reference": "level_4_machine_learning"
+    },
+    {
+      "id": 13,
+      "question_text": "What is the value of x after this code runs?\n\nx = [1, 2, 3]\nx.append(4)",
+      "question_type": "code_trace",
+      "topic_id": "4.5",
+      "difficulty": 2,
+      "code_snippet": "x = [1, 2, 3]\nx.append(4)",
+      "answers": [
+        {
+          "text": "[1, 2, 3, 4]",
+          "correct": true,
+          "explanation": "Correct! append() adds an element to the end of the list. 4 is added after 3.",
+          "teaching_point": "append() modifies the list in place - it doesn't create a new list"
+        },
+        {
+          "text": "[4, 1, 2, 3]",
+          "correct": false,
+          "explanation": "append() adds to the END, not the beginning. Use insert(0, 4) to add at the start.",
+          "common_mistake": "Confusing append with insert at beginning"
+        },
+        {
+          "text": "[1, 2, 3]",
+          "correct": false,
+          "explanation": "append() modifies the list. After x.append(4), x becomes [1, 2, 3, 4].",
+          "common_mistake": "Thinking append doesn't modify the list"
+        },
+        {
+          "text": "4",
+          "correct": false,
+          "explanation": "x is still a list, not just the appended value. x = [1, 2, 3, 4] after the append.",
+          "common_mistake": "Confusing the list with the appended element"
+        }
+      ],
+      "solution_steps": [
+        "1. x = [1, 2, 3] creates a list with three elements",
+        "2. x.append(4) adds 4 to the end of the list",
+        "3. x is now [1, 2, 3, 4]",
+        "4. The list is modified in place (not creating a new list)"
+      ],
+      "lesson_reference": "level_8_python_advanced"
+    },
+    {
+      "id": 14,
+      "question_text": "What is a 'hash function' in cryptography?",
+      "question_type": "multiple_choice",
+      "topic_id": "3.4",
+      "difficulty": 3,
+      "answers": [
+        {
+          "text": "A one-way function that converts data to a fixed-size output",
+          "correct": true,
+          "explanation": "Correct! Hash functions take any input and produce a fixed-length output. You can't reverse it to get the original.",
+          "teaching_point": "Common hash functions: SHA-256, MD5 (deprecated)"
+        },
+        {
+          "text": "A function that encrypts data with a password",
+          "correct": false,
+          "explanation": "Encryption is reversible with the key. Hash functions are one-way - you can't get the original data back.",
+          "common_mistake": "Confusing hashing with encryption"
+        },
+        {
+          "text": "A function that makes data smaller",
+          "correct": false,
+          "explanation": "That's compression. Hash functions produce fixed-size output regardless of input size.",
+          "common_mistake": "Confusing hashing with compression"
+        },
+        {
+          "text": "A function that only works on # symbols",
+          "correct": false,
+          "explanation": "The word 'hash' doesn't refer to the # symbol here. It refers to a cryptographic operation.",
+          "common_mistake": "Taking the name too literally"
+        }
+      ],
+      "solution_steps": [
+        "1. Hash function = one-way transformation",
+        "2. Input: any data (text, files, etc.)",
+        "3. Output: fixed-size 'fingerprint' (hash)",
+        "4. Key property: cannot reverse to get original",
+        "5. Used for: password storage, data integrity"
+      ],
+      "lesson_reference": "level_6_encryption_methods"
+    },
+    {
+      "id": 15,
+      "question_text": "What is 'entanglement' in quantum computing?",
+      "question_type": "multiple_choice",
+      "topic_id": "5.1",
+      "difficulty": 3,
+      "answers": [
+        {
+          "text": "When two qubits are connected so that measuring one instantly affects the other",
+          "correct": true,
+          "explanation": "Correct! Entangled qubits are correlated - knowing one's state tells you about the other, regardless of distance.",
+          "teaching_point": "Einstein called this 'spooky action at a distance'"
+        },
+        {
+          "text": "When quantum wires get physically tangled",
+          "correct": false,
+          "explanation": "Entanglement is a quantum phenomenon, not physical tangling of wires. It's about quantum state correlation.",
+          "common_mistake": "Taking the word too literally"
+        },
+        {
+          "text": "A qubit being in multiple states at once",
+          "correct": false,
+          "explanation": "That's superposition, not entanglement. Entanglement is about the relationship between two or more qubits.",
+          "common_mistake": "Confusing entanglement with superposition"
+        },
+        {
+          "text": "The process of creating a qubit",
+          "correct": false,
+          "explanation": "Creating qubits is different. Entanglement is about creating correlations between existing qubits.",
+          "common_mistake": "Misunderstanding what entanglement creates"
+        }
+      ],
+      "solution_steps": [
+        "1. Entanglement links two or more qubits",
+        "2. Measuring one qubit affects the other instantly",
+        "3. Works regardless of distance between qubits",
+        "4. Essential for quantum computing and quantum cryptography"
+      ],
+      "lesson_reference": "level_9_quantum_computing"
+    },
+    {
+      "id": 16,
+      "question_text": "What does the Python expression 'Hello'[1] return?",
+      "question_type": "code_trace",
+      "topic_id": "4.6",
+      "difficulty": 2,
+      "code_snippet": "'Hello'[1]",
+      "answers": [
+        {
+          "text": "'e'",
+          "correct": true,
+          "explanation": "Correct! Python uses zero-based indexing. Index 0='H', index 1='e'.",
+          "teaching_point": "Remember: indexing starts at 0, not 1!"
+        },
+        {
+          "text": "'H'",
+          "correct": false,
+          "explanation": "'H' is at index 0, not 1. Python starts counting from 0: H(0), e(1), l(2), l(3), o(4).",
+          "common_mistake": "Forgetting zero-based indexing"
+        },
+        {
+          "text": "'l'",
+          "correct": false,
+          "explanation": "'l' is at index 2 and 3. Index 1 is 'e'. Remember: H(0), e(1), l(2), l(3), o(4).",
+          "common_mistake": "Off-by-one error"
+        },
+        {
+          "text": "Error",
+          "correct": false,
+          "explanation": "Index 1 is valid for 'Hello' (which has indices 0-4). This returns 'e'.",
+          "common_mistake": "Thinking the index is out of range"
+        }
+      ],
+      "solution_steps": [
+        "1. String indexing uses square brackets: string[index]",
+        "2. Python uses zero-based indexing",
+        "3. 'Hello' indices: H=0, e=1, l=2, l=3, o=4",
+        "4. 'Hello'[1] = 'e'"
+      ],
+      "lesson_reference": "level_7_python_basics"
+    },
+    {
+      "id": 17,
+      "question_text": "What should Karel do to turn right?",
+      "question_type": "multiple_choice",
+      "topic_id": "1.2",
+      "difficulty": 1,
+      "answers": [
+        {
+          "text": "Turn left three times",
+          "correct": true,
+          "explanation": "Correct! Karel only has turnLeft(), so turning right requires three left turns (90° × 3 = 270° = -90° = right turn).",
+          "teaching_point": "This is a great example of problem decomposition - breaking down 'turn right' into available commands"
+        },
+        {
+          "text": "Use the turnRight() command",
+          "correct": false,
+          "explanation": "Karel doesn't have a turnRight() command! You must use turnLeft() three times instead.",
+          "common_mistake": "Assuming turnRight() exists"
+        },
+        {
+          "text": "Turn left once",
+          "correct": false,
+          "explanation": "Turning left once goes 90° counter-clockwise. To turn right (90° clockwise), you need three left turns.",
+          "common_mistake": "Not understanding the geometry"
+        },
+        {
+          "text": "Move backward",
+          "correct": false,
+          "explanation": "Karel can't move backward! And moving isn't the same as turning. Use turnLeft() three times to turn right.",
+          "common_mistake": "Confusing movement with turning"
+        }
+      ],
+      "solution_steps": [
+        "1. Karel only has turnLeft() for turning",
+        "2. Each turnLeft() rotates 90° counter-clockwise",
+        "3. To turn right (90° clockwise):",
+        "4. turnLeft() + turnLeft() + turnLeft() = 270° left = 90° right"
+      ],
+      "lesson_reference": "level_1_karel_basics"
+    },
+    {
+      "id": 18,
+      "question_text": "What type of AI risk involves AI systems reflecting biases from their training data?",
+      "question_type": "multiple_choice",
+      "topic_id": "2.4",
+      "difficulty": 2,
+      "answers": [
+        {
+          "text": "Algorithmic bias",
+          "correct": true,
+          "explanation": "Correct! When training data contains biases (racial, gender, etc.), the AI can learn and amplify these biases.",
+          "teaching_point": "Example: facial recognition performing worse on certain demographics"
+        },
+        {
+          "text": "AI hallucination",
+          "correct": false,
+          "explanation": "Hallucination is when AI makes up false information. Bias is when AI reflects unfair patterns from training data.",
+          "common_mistake": "Confusing different AI risks"
+        },
+        {
+          "text": "Deepfake",
+          "correct": false,
+          "explanation": "Deepfakes are fake videos/images generated by AI. Bias refers to unfair treatment based on training data.",
+          "common_mistake": "Confusing different AI concepts"
+        },
+        {
+          "text": "Quantum error",
+          "correct": false,
+          "explanation": "Quantum errors are specific to quantum computing, not general AI bias. Bias comes from biased training data.",
+          "common_mistake": "Mixing up unrelated concepts"
+        }
+      ],
+      "solution_steps": [
+        "1. AI learns from training data",
+        "2. If data contains biases, AI learns them",
+        "3. This is called algorithmic bias",
+        "4. Can lead to unfair decisions in hiring, lending, policing, etc."
+      ],
+      "lesson_reference": "level_4_machine_learning"
+    },
+    {
+      "id": 19,
+      "question_text": "What is the output?\n\nif 5 > 3:\n    print('Yes')\nelse:\n    print('No')",
+      "question_type": "code_trace",
+      "topic_id": "4.2",
+      "difficulty": 1,
+      "code_snippet": "if 5 > 3:\n    print('Yes')\nelse:\n    print('No')",
+      "answers": [
+        {
+          "text": "Yes",
+          "correct": true,
+          "explanation": "Correct! 5 > 3 is True, so the if block executes and prints 'Yes'.",
+          "teaching_point": "The condition determines which branch runs"
+        },
+        {
+          "text": "No",
+          "correct": false,
+          "explanation": "5 is greater than 3, so the condition is True, and the if block runs (not else).",
+          "common_mistake": "Evaluating the condition incorrectly"
+        },
+        {
+          "text": "Yes\\nNo",
+          "correct": false,
+          "explanation": "Only one branch executes - either if OR else, never both. Since 5 > 3 is True, only 'Yes' prints.",
+          "common_mistake": "Thinking both branches run"
+        },
+        {
+          "text": "Error",
+          "correct": false,
+          "explanation": "This is valid Python. The condition 5 > 3 evaluates to True, so it prints 'Yes'.",
+          "common_mistake": "Expecting a syntax error"
+        }
+      ],
+      "solution_steps": [
+        "1. Evaluate condition: 5 > 3",
+        "2. 5 is greater than 3, so condition is True",
+        "3. When condition is True, if block executes",
+        "4. print('Yes') runs, else is skipped",
+        "5. Output: Yes"
+      ],
+      "lesson_reference": "level_7_python_basics"
+    },
+    {
+      "id": 20,
+      "question_text": "Decrypt 'KHOOR' using a Caesar cipher with shift 3 (reverse the encryption):",
+      "question_type": "multiple_choice",
+      "topic_id": "3.1",
+      "difficulty": 2,
+      "answers": [
+        {
+          "text": "HELLO",
+          "correct": true,
+          "explanation": "Correct! Shift back by 3: K→H, H→E, O→L, O→L, R→O = HELLO",
+          "teaching_point": "To decrypt, shift in the opposite direction"
+        },
+        {
+          "text": "NKRRU",
+          "correct": false,
+          "explanation": "You shifted forward instead of backward. To decrypt, subtract the shift: K-3=H, not K+3=N.",
+          "common_mistake": "Shifting the wrong direction for decryption"
+        },
+        {
+          "text": "JELLO",
+          "correct": false,
+          "explanation": "Close but K-3=H, not J. K is the 11th letter, H is the 8th (11-3=8).",
+          "common_mistake": "Off-by-one error in shift calculation"
+        },
+        {
+          "text": "WORLD",
+          "correct": false,
+          "explanation": "The letters don't match. K→H, H→E, O→L, O→L, R→O spells HELLO.",
+          "common_mistake": "Random guess"
+        }
+      ],
+      "solution_steps": [
+        "1. To decrypt, shift backward (subtract the key)",
+        "2. K - 3 = H (11th letter - 3 = 8th letter)",
+        "3. H - 3 = E (8th letter - 3 = 5th letter)",
+        "4. O - 3 = L (15th letter - 3 = 12th letter)",
+        "5. O - 3 = L",
+        "6. R - 3 = O (18th letter - 3 = 15th letter)",
+        "7. Result: HELLO"
+      ],
+      "lesson_reference": "level_5_cryptography_basics"
+    }
+  ]
+}

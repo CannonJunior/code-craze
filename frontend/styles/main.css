@@ -1,0 +1,504 @@
+/* Code Craze Academy - Main Stylesheet */
+
+:root {
+    /* Color Palette - Coding/Tech Theme */
+    --primary-blue: #2563eb;
+    --secondary-purple: #7c3aed;
+    --success-green: #10b981;
+    --warning-red: #ef4444;
+    --dark-gray: #1f2937;
+    --light-gray: #f3f4f6;
+    --border-gray: #e5e7eb;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Typography */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: white;
+    border-bottom: 2px solid var(--primary-blue);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.nav {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.nav-button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: none;
+    background-color: transparent;
+    color: var(--dark-gray);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-button:hover {
+    color: var(--primary-blue);
+}
+
+.nav-button.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.view {
+    display: none;
+}
+
+.view.active {
+    display: block;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+    color: white;
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Competency Dashboard */
+.competency-dashboard {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.readiness-score {
+    text-align: center;
+}
+
+.readiness-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.readiness-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.competency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.competency-card {
+    background-color: var(--light-gray);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.competency-card h4 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mastery-bar {
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+}
+
+.mastery-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+    transition: width 0.5s ease;
+}
+
+.competency-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.trend {
+    font-weight: bold;
+}
+
+.recommendations {
+    background-color: var(--light-gray);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.recommendations h4 {
+    margin-bottom: var(--spacing-sm);
+}
+
+#recommendations-list {
+    list-style-position: inside;
+}
+
+#recommendations-list li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.action-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.action-card:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.action-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.action-card h3 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--dark-gray);
+}
+
+.action-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Practice View */
+.practice-container {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.practice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--border-gray);
+    margin-bottom: var(--spacing-md);
+}
+
+.practice-stats {
+    display: flex;
+    gap: var(--spacing-md);
+    font-weight: bold;
+}
+
+.question-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.practice-context {
+    background-color: var(--light-gray);
+    padding: var(--spacing-sm);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+    font-style: italic;
+    color: #666;
+}
+
+.question-content {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--light-gray);
+    border-radius: 8px;
+}
+
+/* Code Snippet Styling */
+.code-snippet {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-mono);
+    overflow-x: auto;
+}
+
+.code-snippet pre {
+    margin: 0;
+}
+
+.code-snippet code {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.code-snippet.hidden {
+    display: none;
+}
+
+.answers-container {
+    margin-bottom: var(--spacing-lg);
+}
+
+.answer-option {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    background-color: white;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.answer-option:hover {
+    border-color: var(--primary-blue);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.answer-option.selected {
+    border-color: var(--primary-blue);
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
+.answer-option.correct {
+    border-color: var(--success-green);
+    background-color: rgba(16, 185, 129, 0.1);
+}
+
+.answer-option.incorrect {
+    border-color: var(--warning-red);
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.explanation-container {
+    background-color: var(--light-gray);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+.explanation-container.hidden {
+    display: none;
+}
+
+.question-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}
+
+/* Buttons */
+.btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-purple);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #6d28d9;
+}
+
+.btn.hidden {
+    display: none;
+}
+
+/* Progress View */
+.progress-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.stat-card {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-top: var(--spacing-sm);
+}
+
+.levels-container {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Badges View */
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.badge-item {
+    background-color: white;
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.badge-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Footer */
+.footer {
+    background-color: white;
+    border-top: 1px solid var(--border-gray);
+    padding: var(--spacing-md);
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .competency-grid {
+        grid-template-columns: 1fr;
+    }
+}
