@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: code-craze-academy
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python -c "from backend.database.seed_data import seed_database; seed_database()"
+    startCommand: gunicorn backend.server:app -w 2 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: DEBUG
+        value: "false"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: "sqlite:///data/code_craze.db"
+      - key: ALLOWED_ORIGINS
+        value: "https://code-craze-academy.onrender.com"

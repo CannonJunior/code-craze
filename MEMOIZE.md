@@ -104,3 +104,51 @@ Implemented Phase 1: Core Infrastructure for Code Craze Academy.
 - Application ready for use at http://localhost:8989
 
 ---
+
+## Session Entry 4
+
+**Date:** 2026-01-28
+
+**User Prompt:**
+The project is currently running on local host. Research and develop a plan to run this as a web application that can be viewed by external users.
+
+**Response:**
+Researched deployment options and created comprehensive deployment plan.
+
+**Research Summary:**
+- Evaluated platforms: Render, Railway, Fly.io, PythonAnywhere
+- Render recommended for best balance of simplicity and free tier
+- Key consideration: SQLite persistence on cloud platforms
+
+**Files Created:**
+
+1. **`DEPLOYMENT_PLAN.md`** - Comprehensive deployment guide including:
+   - Platform comparison (Render, Railway, Fly.io)
+   - Step-by-step Render deployment instructions
+   - Database migration options (SQLite vs PostgreSQL)
+   - Code modifications for production
+   - Security checklist
+   - Cost summary
+
+2. **Deployment Configuration Files:**
+   - `requirements.txt` - Python dependencies for pip
+   - `Procfile` - Gunicorn start command
+   - `render.yaml` - Render infrastructure-as-code
+   - `runtime.txt` - Python version specification
+   - `.gitignore` - Git ignore patterns
+
+3. **Code Updates:**
+   - Updated CORS settings to include render.com domain
+
+**Recommended Deployment Steps:**
+1. Push code to GitHub
+2. Create Render account (free)
+3. Deploy as Web Service
+4. Access at: `https://code-craze-academy.onrender.com`
+
+**Sources:**
+- [Render FastAPI Deployment](https://render.com/articles/fastapi-deployment-options)
+- [FastAPI Official Deployment Docs](https://fastapi.tiangolo.com/deployment/)
+- [Railway vs Render Comparison](https://northflank.com/blog/railway-vs-render)
+
+---

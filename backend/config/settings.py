@@ -30,8 +30,11 @@ class Settings(BaseSettings):
     algorithm: str = Field(default="HS256", alias="ALGORITHM")
     access_token_expire_minutes: int = Field(default=10080, alias="ACCESS_TOKEN_EXPIRE_MINUTES")  # 1 week
 
-    # CORS
-    allowed_origins: str = Field(default="http://localhost:8989,http://127.0.0.1:8989", alias="ALLOWED_ORIGINS")
+    # CORS - Include localhost for development and render.com for production
+    allowed_origins: str = Field(
+        default="http://localhost:8989,http://127.0.0.1:8989,https://code-craze-academy.onrender.com",
+        alias="ALLOWED_ORIGINS"
+    )
 
     class Config:
         """Pydantic configuration."""
